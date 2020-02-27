@@ -1,0 +1,280 @@
+body, ul, li {margin: 0;padding: 0;}
+body {background:#f6f3ed;}
+header {
+    display: flex;
+    width: 100vw;
+    height: 60vw;
+    max-height: 90vh;
+    position: relative;
+}
+header h1 {
+    width: fit-content;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 5vw;
+    font-size: 12vw;
+    color: #FFF;
+    z-index: 1;
+}
+nav ul {
+    font-size: 0;
+}
+nav ul li {
+    display: inline-flex;
+    width: calc( 100vw / 3 );
+    height: 60vw;
+    max-height: 90vh;
+    position: relative;
+}
+nav ul a:hover li {
+}
+nav ul li::after {
+    content: "▽";
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 3rem;
+    color: #FFF;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+}
+
+nav ul a:hover li::after {
+    bottom: 2rem;
+}
+
+header ul a {
+    text-decoration: none;
+}
+#menu1 {
+    background: linear-gradient(150deg, #b72c38 0%, #b72c38 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%);
+}
+li#menu1::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(images/muesli.png) no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+    filter: drop-shadow(7px 20px 7px rgba(0,0,0,0.4));
+}
+#menu2 {
+    background: linear-gradient(150deg, #c98d3a 0%, #c98d3a 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%);
+}
+li#menu2::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(images/couch.png) no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+    filter: drop-shadow(7px 20px 7px rgba(0,0,0,0.4));
+}
+#menu3 {
+    background: linear-gradient(150deg, #8BB22B 0%, #8BB22B 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%);
+}
+li#menu3::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(images/salad.png) no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+    filter: drop-shadow(7px 20px 7px rgba(0,0,0,0.4));
+}
+
+section {
+    display: block;
+    width: 100vw;
+    height: 60vw;
+    max-height: 90vh;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+#section1 {
+    background: #FFF;
+    position: relative;
+}
+#section1 div {
+    height: fit-content;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+#section1 figure {
+    display: inline-block;
+    width: 30vw;
+    height: 30vw;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    background: #f6f3ed;
+    border-radius: 5px;
+}
+#section1 figure img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+#section1 figcaption {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    color: #FFF;
+    opacity: 0;
+}
+
+#section1 figure:hover figcaption {
+    top: 0;
+    opacity: 1;
+}
+#section1 figcaption h3 {
+    margin: 0;
+    padding-top: 3vw;
+}
+#section2 {
+    position: relative;
+}
+#section2 .button {
+    display: block;
+    width: 20vw;
+    height: 8vw;
+    position: absolute;
+    top: 26vw;
+    right: 5vw;
+    background: #f68792;
+    border-radius: 1rem;
+    border-bottom: 1vw solid #ce6a74;
+    color: #FFF;
+    text-decoration: none;
+}
+#section2 .button a {
+    display: block;
+    width: 20vw;
+    height: 8vw;
+    font-size: 2.5vw;
+    line-height: 8vw;
+    color: #FFF;
+    text-decoration: none;
+}
+#section2 .button:hover {
+    top: calc(26vw + 3px);
+}
+#section3 {
+    background: #FFF;
+    padding: .5rem 0 0;
+}
+#section2 h2, #section3 h2, #section4 h2 {
+    width: fit-content;
+    margin: 1rem auto 0;
+    position: relative;
+}
+#section2 h2::before, #section2 h2::after, #section3 h2::before, #section3 h2::after, #section4 h2::before, #section4 h2::after {
+    content: "";
+    display: block;
+    height: 2rem;
+    position: absolute;
+    top: 0;
+    border-left: 3px solid #000;
+}
+#section2 h2::before, #section3 h2::before, #section4 h2::before {
+    left: -2rem;
+    transform: rotate(-45deg);
+}
+#section2 h2::after, #section3 h2::after, #section4 h2::after {
+    right: -2rem;
+    transform: rotate(45deg);
+}
+section img {
+    width: 50vw;
+    margin: 5%;
+    max-width: 70vh;
+    max-height: 70vh;
+}
+#section2 span::before {
+    content: "berry";
+    color: #f68792;
+    position: absolute;
+    z-index: 1;
+    font-size: 2em;
+    top: 1rem;
+    left: -2rem;
+}
+#section3 span::before {
+    content: "shrimp";
+    color: #E7AE61;
+    position: absolute;
+    z-index: 1;
+    font-size: 2em;
+    top: 1rem;
+    left: -2rem;
+}
+#section4 span::before {
+    content: "green";
+    color: #D1F084;
+    position: absolute;
+    z-index: 1;
+    font-size: 2em;
+    top: 1rem;
+    left: -2rem;
+}
+footer ul {
+    width: 100vw;
+    height: 5rem;
+    box-sizing: content-box;
+    background: #d8d5cf;
+    text-align: center;
+}
+footer ul li {
+    display: inline-block;
+    padding: 1rem;
+}
+footer ul li a {
+    font-size: 2rem;
+    color: #FFF;
+    text-decoration: none;
+    z-index: 2;
+    position: relative;
+}
+footer ul li a:hover {
+    color: #EEE;
+}
+footer ul li a::before {
+    content: "";
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #BBB;
+    border-radius: 50%;
+    z-index: -1;
+}
+footer ul li a:hover::before {
+    content: "";
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: rgba(201, 141, 58, 0.5);
+}
